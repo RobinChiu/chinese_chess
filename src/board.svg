@@ -1,0 +1,251 @@
+<svg id="board" width="450" height="500" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+	<g id="corner-mark">
+		<line x1="-15" y1="-5" x2="-5" y2="-5"/>
+		<line x1="-5" y1="-15" x2="-5" y2="-5"/>
+		<line x1="15" y1="-5" x2="5" y2="-5"/>
+		<line x1="5" y1="-15" x2="5" y2="-5"/>
+		<line x1="-15" y1="5" x2="-5" y2="5"/>
+		<line x1="-5" y1="15" x2="-5" y2="5"/>
+		<line x1="15" y1="5" x2="5" y2="5"/>
+		<line x1="5" y1="15" x2="5" y2="5"/>
+	</g>
+	</defs>
+
+  <style>
+    text {
+      font-family: "DFKai-SB", "PMingLiU", serif;
+    }
+  </style>
+  <!-- 棋盤底色 -->
+  <rect x="0" y="0" width="450" height="500" fill="#f0d9b5" stroke="black"/>
+
+  <!-- 橫線 -->
+  <g stroke="black">
+    <!-- 10 橫線 -->
+    <!-- y = 25 + i*50 -->
+    <line x1="25" y1="25" x2="425" y2="25" />
+    <line x1="25" y1="75" x2="425" y2="75" />
+    <line x1="25" y1="125" x2="425" y2="125" />
+    <line x1="25" y1="175" x2="425" y2="175" />
+    <line x1="25" y1="225" x2="425" y2="225" />
+    <line x1="25" y1="275" x2="425" y2="275" />
+    <line x1="25" y1="325" x2="425" y2="325" />
+    <line x1="25" y1="375" x2="425" y2="375" />
+    <line x1="25" y1="425" x2="425" y2="425" />
+    <line x1="25" y1="475" x2="425" y2="475" />
+
+    <!-- 9 直線（中間跳空） -->
+    <line x1="25" y1="25" x2="25" y2="475" />
+    <line x1="75" y1="25" x2="75" y2="225" />
+    <line x1="75" y1="275" x2="75" y2="475" />
+    <line x1="125" y1="25" x2="125" y2="225" />
+    <line x1="125" y1="275" x2="125" y2="475" />
+    <line x1="175" y1="25" x2="175" y2="225" />
+    <line x1="175" y1="275" x2="175" y2="475" />
+    <line x1="225" y1="25" x2="225" y2="225" />
+    <line x1="225" y1="275" x2="225" y2="475" />
+    <line x1="275" y1="25" x2="275" y2="225" />
+    <line x1="275" y1="275" x2="275" y2="475" />
+    <line x1="325" y1="25" x2="325" y2="225" />
+    <line x1="325" y1="275" x2="325" y2="475" />
+    <line x1="375" y1="25" x2="375" y2="225" />
+    <line x1="375" y1="275" x2="375" y2="475" />
+    <line x1="425" y1="25" x2="425" y2="475" />
+
+    <!-- 九宮格交叉線 -->
+    <line x1="175" y1="25" x2="275" y2="125" />
+    <line x1="275" y1="25" x2="175" y2="125" />
+    <line x1="175" y1="375" x2="275" y2="475" />
+    <line x1="275" y1="375" x2="175" y2="475" />
+
+	<!-- 使用 transform 重構交叉裝飾 -->
+	<use href="#corner-mark" transform="translate(75,125)" />
+	<use href="#corner-mark" transform="translate(375,125)" />
+	<use href="#corner-mark" transform="translate(125,175)" />
+	<use href="#corner-mark" transform="translate(225,175)" />
+	<use href="#corner-mark" transform="translate(325,175)" />
+	<use href="#corner-mark" transform="translate(75,375)" />
+	<use href="#corner-mark" transform="translate(375,375)" />
+	<use href="#corner-mark" transform="translate(125,325)" />
+	<use href="#corner-mark" transform="translate(225,325)" />
+	<use href="#corner-mark" transform="translate(325,325)" />
+  </g>
+
+    
+
+  <!-- 楚河漢界 -->
+  <text x="112.5" y="260" font-size="20" fill="black">楚 河</text>
+  <text x="262.5" y="260" font-size="20" fill="black">漢 界</text>
+
+  <!-- 棋子 -->
+  <g font-size="20" font-family="serif" text-anchor="middle" dominant-baseline="middle">
+    <!-- 黑方 -->
+    <g fill="#000">
+	  <g class="piece" data-color="black" data-name="車" transform="translate(25,25)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">車</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="馬" transform="translate(75,25)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">馬</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="象" transform="translate(125,25)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">象</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="士" transform="translate(175,25)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">士</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="將" transform="translate(225,25)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">將</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="士" transform="translate(275,25)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">士</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="象" transform="translate(325,25)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">象</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="馬" transform="translate(375,25)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">馬</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="車" transform="translate(425,25)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">車</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="包" transform="translate(75,125)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">包</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="包" transform="translate(375,125)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">包</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="卒" transform="translate(25,175)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">卒</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="卒" transform="translate(125,175)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">卒</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="卒" transform="translate(225,175)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">卒</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="卒" transform="translate(325,175)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">卒</text>
+	  </g>
+	  <g class="piece" data-color="black" data-name="卒" transform="translate(425,175)">
+		<circle r="20" fill="white" stroke="black" stroke-width="2"/>
+		<circle r="16" fill="white" stroke="black" stroke-width="2"/>
+		<text x="0" y="1" font-size="20" fill="black">卒</text>
+	  </g>
+    </g>
+
+    <!-- 紅方 -->
+    <g fill="#c40000">
+	<g class="piece" data-color="red" data-name="俥" transform="translate(25,475)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">俥</text>
+	</g>
+	<g class="piece" data-color="red" data-name="傌" transform="translate(75,475)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">傌</text>
+	</g>
+	<g class="piece" data-color="red" data-name="相" transform="translate(125,475)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">相</text>
+	</g>
+	<g class="piece" data-color="red" data-name="仕" transform="translate(175,475)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">仕</text>
+	</g>
+	<g class="piece" data-color="red" data-name="帥" transform="translate(225,475)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">帥</text>
+	</g>
+	<g class="piece" data-color="red" data-name="仕" transform="translate(275,475)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">仕</text>
+	</g>
+	<g class="piece" data-color="red" data-name="相" transform="translate(325,475)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">相</text>
+	</g>
+	<g class="piece" data-color="red" data-name="傌" transform="translate(375,475)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">傌</text>
+	</g>
+	<g class="piece" data-color="red" data-name="俥" transform="translate(425,475)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">俥</text>
+	</g>
+	<g class="piece" data-color="red" data-name="炮" transform="translate(75,375)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">炮</text>
+	</g>
+	<g class="piece" data-color="red" data-name="炮" transform="translate(375,375)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">炮</text>
+	</g>
+	<g class="piece" data-color="red" data-name="兵" transform="translate(25,325)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">兵</text>
+	</g>
+	<g class="piece" data-color="red" data-name="兵" transform="translate(125,325)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">兵</text>
+	</g>
+	<g class="piece" data-color="red" data-name="兵" transform="translate(225,325)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">兵</text>
+	</g>
+	<g class="piece" data-color="red" data-name="兵" transform="translate(325,325)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">兵</text>
+	</g>
+	<g class="piece" data-color="red" data-name="兵" transform="translate(425,325)">
+	  <circle r="20" fill="white" stroke="red" stroke-width="2"/>
+	  <circle r="16" fill="white" stroke="red" stroke-width="2"/>
+	  <text x="0" y="1" font-size="20" fill="red">兵</text>
+	</g>
+    </g>
+  </g>
+</svg>
