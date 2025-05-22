@@ -1,4 +1,4 @@
-<svg id="board" width="450" height="500" xmlns="http://www.w3.org/2000/svg">
+<svg id="board" width="800" height="500" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 	<g id="corner-mark">
 		<line x1="-15" y1="-5" x2="-5" y2="-5"/>
@@ -7,6 +7,15 @@
 		<line x1="5" y1="-15" x2="5" y2="-5"/>
 		<line x1="-15" y1="5" x2="-5" y2="5"/>
 		<line x1="-5" y1="15" x2="-5" y2="5"/>
+		<line x1="15" y1="5" x2="5" y2="5"/>
+		<line x1="5" y1="15" x2="5" y2="5"/>
+	</g>
+	</defs>
+
+	<defs>
+	<g id="corner-mark2">
+		<line x1="15" y1="-5" x2="5" y2="-5"/>
+		<line x1="5" y1="-15" x2="5" y2="-5"/>
 		<line x1="15" y1="5" x2="5" y2="5"/>
 		<line x1="5" y1="15" x2="5" y2="5"/>
 	</g>
@@ -70,6 +79,12 @@
 	<use href="#corner-mark" transform="translate(125,325)" />
 	<use href="#corner-mark" transform="translate(225,325)" />
 	<use href="#corner-mark" transform="translate(325,325)" />
+
+	<use href="#corner-mark2" transform="translate(25,175)" />
+	<use href="#corner-mark2" transform="translate(25,325)" />
+	<use href="#corner-mark2" transform="translate(425,175) rotate(180)" />
+	<use href="#corner-mark2" transform="translate(425,325) rotate(180)" />
+
   </g>
 
     
